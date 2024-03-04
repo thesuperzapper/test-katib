@@ -1,0 +1,5 @@
+kubeflow-katib==0.15.0
+
+# needed because kubeflow-katib==0.15.0 pinns grpcio to 1.41.1, which is not compatible with ARM64 CPUs
+# - https://github.com/kubeflow/katib/blob/v0.15.0/sdk/python/v1beta1/setup.py#L25
+grpcio>=1.41.1,<2.0.0
